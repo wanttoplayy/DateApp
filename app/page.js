@@ -153,7 +153,7 @@ export default function DatePlan() {
                         onChange={(e) =>
                           handleActivityChange(e, selectedLocationName, idx)
                         }
-                        className="border rounded-md p-2 w-60 focus:border-2 focus:ring-2 focus:ring-indigo-200 shadow-md bg-white placeholder-[#2b2d42]"
+                        className="border rounded-md p-2 w-60 text-[#023e8a] focus:border-2 focus:ring-2 focus:ring-indigo-200 shadow-md bg-white placeholder-[#2b2d42]"
                         placeholder="Enter activity..."
                       />
                     </div>
