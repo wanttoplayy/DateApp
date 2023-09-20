@@ -123,7 +123,7 @@ export default function DatePlan() {
                           href={entry.linkUrl}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="text-decoration-none"
+                          className="text-decoration-none bg-white p-2 rounded-lg"
                         >
                           <Image
                             src={entry.imageUrl}
@@ -153,7 +153,7 @@ export default function DatePlan() {
                         onChange={(e) =>
                           handleActivityChange(e, selectedLocationName, idx)
                         }
-                        className="border rounded-md p-2 w-60 focus:border-2 focus:ring-2 focus:ring-indigo-200 shadow-md bg-white placeholder-[#2b2d42]"
+                        className="border rounded-md p-2 w-60 focus:border-2 focus:ring-2 focus:ring-indigo-200 shadow-md bg-white placeholder-black"
                         placeholder="Enter activity..."
                       />
                     </div>
