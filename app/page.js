@@ -97,7 +97,7 @@ export default function DatePlan() {
                 className="bg-white rounded-lg shadow-md p-4 transition-transform transform hover:scale-105 hover:bg-white"
                 onClick={() => setSelectedLocationName(location.name)}
               >
-                <h2 className="text-2xl font-semibold text-[#023e8a]">
+                <h2 className="text-2xl font-semibold text-black">
                   {location.name}
                 </h2>
               </button>
@@ -123,7 +123,7 @@ export default function DatePlan() {
                           href={entry.linkUrl}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="text-decoration-none bg-white p-2 rounded-lg"
+                          className="text-decoration-none"
                         >
                           <Image
                             src={entry.imageUrl}
@@ -153,7 +153,7 @@ export default function DatePlan() {
                         onChange={(e) =>
                           handleActivityChange(e, selectedLocationName, idx)
                         }
-                        className="border rounded-md p-2 w-60 focus:border-2 focus:ring-2 focus:ring-indigo-200 shadow-md bg-white placeholder-black"
+                        className="border rounded-md p-2 w-60 focus:border-2 focus:ring-2 focus:ring-indigo-200 shadow-md bg-white placeholder-[#2b2d42]"
                         placeholder="Enter activity..."
                       />
                     </div>
