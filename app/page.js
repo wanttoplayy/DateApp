@@ -4,6 +4,8 @@ import Image from "next/image";
 import PattayaCafe from "public/images/cafePattaya.jpg";
 import BlueSpace from "public/images/BlueSpaceCafe.jpg";
 import Travel from "public/images/travel.jpg";
+import safariworld from "public/images/safariworld.jpg";
+import chinatown from "public/images/chinatown.jpg";
 import { Roboto, Raleway } from "next/font/google";
 
 const roboto = Raleway({
@@ -16,50 +18,50 @@ const roboto = Raleway({
 export default function DatePlan() {
   const initialLocations = [
     {
+      name: "Bangkok",
+      schedule: [
+        {
+          time: "13.00-18.00",
+          activity: "Safari World",
+          imageUrl: safariworld,
+          linkUrl: "https://safariworld.com/365/",
+        },
+        {
+          time: "18.00-21.00",
+          activity: "เยาวราช",
+          imageUrl: chinatown,
+        },
+      ],
+    },
+    {
       name: "Pattaya",
       schedule: [
         {
-          time: "10-12am",
-          activity: "Travel to Pattaya",
+          time: "12.00-14.00",
+          activity: "Go to Pattaya",
           imageUrl: Travel,
         },
         {
-          time: "12-1.30pm",
+          time: "14.00-15.30",
           activity: "Good Old Sea Cafe",
           imageUrl: PattayaCafe,
           linkUrl: "https://www.facebook.com/goodoldsea/",
         },
         {
-          time: "2-3.30pm",
+          time: "15.30-17.00",
           activity: "Blue Space Cafe",
           imageUrl: BlueSpace,
           linkUrl: "https://www.facebook.com/bluespacecafe/",
         },
-      ],
-    },
-    {
-      name: "Bangkok",
-      schedule: [
-        // {
-        //   time: "10-11am",
-        //   activity: "Arrive in Bangkok",
-        //   imageUrl: "path_to_bangkok_image1.jpg",
-        // },
-        // {
-        //   time: "11-12pm",
-        //   activity: "Visit Temple",
-        //   imageUrl: "path_to_bangkok_image2.jpg",
-        // },
-        // {
-        //   time: "12-1pm",
-        //   activity: "Lunch at Riverside",
-        //   imageUrl: "path_to_bangkok_image3.jpg",
-        // },
-        // {
-        //   time: "1-2pm",
-        //   activity: "Shopping at MBK",
-        //   imageUrl: "path_to_bangkok_image4.jpg",
-        // },
+        {
+          time: "17.00-19.00",
+          activity: "To be define",
+        },
+        {
+          time: "19.00-21.00",
+          activity: "Back to Bangkok",
+          imageUrl: Travel,
+        },
       ],
     },
   ];
@@ -92,10 +94,10 @@ export default function DatePlan() {
             {locations.map((location, index) => (
               <button
                 key={index}
-                className="bg-white rounded-lg shadow-md p-4 transition-transform transform hover:scale-105 hover:bg-pink-100"
+                className="bg-white rounded-lg shadow-md p-4 transition-transform transform hover:scale-105 hover:bg-white"
                 onClick={() => setSelectedLocationName(location.name)}
               >
-                <h2 className="text-2xl font-semibold text-[#2b2d42]">
+                <h2 className="text-2xl font-semibold text-[#023e8a]">
                   {location.name}
                 </h2>
               </button>
@@ -105,7 +107,7 @@ export default function DatePlan() {
           <>
             <button
               onClick={() => setSelectedLocationName(null)}
-              className="self-start mb-4 bg-white py-1 px-3 rounded-full shadow-md text-[#2b2d42] hover:bg-pink-100 transition-colors"
+              className="self-start mb-4 bg-white py-1 px-3 rounded-full shadow-md text-[#023e8a] hover:bg-pink-100 transition-colors"
             >
               ← Go back
             </button>
@@ -142,7 +144,7 @@ export default function DatePlan() {
                       )}
                     </div>
                     <div>
-                      <h3 className="text-xl font-semibold mb-2 text-[#2b2d42]">
+                      <h3 className="text-xl font-semibold mb-2 text-[#023e8a]">
                         {entry.time}
                       </h3>
                       <input
